@@ -25,13 +25,13 @@ const Checkout = (props) => {
     const enteredCity = cityInputRef.current.value;
 
     const enteredNameIsValid =
-      !isEmpty(enteredName) && enteredName.trim().length > 3;
+      !isEmpty(enteredName) && enteredName.trim().length > 3 && /^[A-Za-z][A-Za-z ]+$/i;
     const enteredStreetIsValid =
-      !isEmpty(enteredStreet) && enteredStreet.trim().length > 3;
+      !isEmpty(enteredStreet) && enteredStreet.trim().length > 3 && /^[,-@.\/#&+\w\s]*$/i.test(enteredStreet);
     const enteredPostalCodeIsValid =
-      !isEmpty(enteredPostalCode) && enteredPostalCode.trim().length === 5;
+      !isEmpty(enteredPostalCode) && enteredPostalCode.trim().length === 5 && /^[0-9]{5}(?:-[0-9]{4})?$/i.test(enteredPostalCode);
     const enteredCityIsValid =
-      !isEmpty(enteredCity) && enteredCity.trim().length > 3;
+      !isEmpty(enteredCity) && enteredCity.trim().length > 3 && /^[A-Za-z][A-Za-z ]+$/i.test(enteredCity);
 
     setformInputValidity({
       name: enteredNameIsValid,
@@ -79,13 +79,13 @@ const Checkout = (props) => {
         {!formInputValidity.name && <p>Please enter a valid name!</p>}
       </div>
       <div className={streetControlClasses}>
-        <label htmlFor="street">Street</label>
+        <label htmlFor="street">Street Address</label>
         <input type="text" id="street" ref={streetInputRef} />
-        {!formInputValidity.street && <p>Please enter a valid street!</p>}
+        {!formInputValidity.street && <p>Please enter a valid street address!</p>}
       </div>
       <div className={postalCodeControlClasses}>
         <label htmlFor="postal">Postal Code</label>
-        <input type="text" id="postal" ref={postalCodeInputRef} />
+        <input type="number" id="postal" min={2} ref={postalCodeInputRef} />
         {!formInputValidity.postalCode && (
           <p>Please enter a valid postal code! (5 characters long)</p>
         )}

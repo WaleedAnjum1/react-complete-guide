@@ -1,46 +1,97 @@
 .cart-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    max-height: 20rem;
-    overflow: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #8a2b06;
+}
+
+.actions .button {
+  background-color: #8a2b06;
+  color: white;
+}
+
+.PlacingOrder {
+  color: black;
+  text-align: center;
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #8a2b06;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 1rem 0;
+  100% {
+    -webkit-transform: rotate(360deg);
   }
-  
-  .actions {
-    text-align: right;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .actions button {
-    font: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #8a2b06;
-    padding: 0.5rem 2rem;
-    border-radius: 25px;
-    margin-left: 1rem;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .actions button:hover,
-  .actions button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
-    color: white;
-  }
-  
-  .actions .button--alt {
-    color: #8a2b06;
-  }
-  
-  .actions .button {
-    background-color: #8a2b06;
-    color: white;
-  }
+}
+
+.OrderPlaced {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  margin: auto;
+  background: linear-gradient(130deg, #eb8258, #8a2b06);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  font-size: 33px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 0px;
+  letter-spacing: 3px;
+}
