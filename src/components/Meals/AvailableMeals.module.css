@@ -1,24 +1,77 @@
 .meals {
-    max-width: 60rem;
-    width: 90%;
-    margin: 2rem auto;
-    animation: meals-appear 1s ease-out forwards;
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.MealsError {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  height: 120px;
+  font-family: 'Kanit', sans-serif;
+  margin: auto;
+  background: linear-gradient(130deg, #ff674f, #e9160b);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+  font-size: 33px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.MealsLoading {
+  color: white;
+  text-align: center;
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  .meals ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  100% {
+    -webkit-transform: rotate(360deg);
   }
-  
-  @keyframes meals-appear {
-    from {
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
