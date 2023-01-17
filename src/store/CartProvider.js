@@ -44,7 +44,6 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "REMOVE_CART_ITEM") {
-    
     //finds index of item in an array
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
@@ -56,11 +55,9 @@ const cartReducer = (state, action) => {
 
     let updatedItems;
     if (existingItem.amount === 1) {
-      
       //all items where id !== action id are kept and for one where id === action id we remove that item
       updatedItems = state.items.filter((item) => item.id !== action.id);
     } else {
-      
       //decrease item by 1
       const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
 
@@ -76,6 +73,9 @@ const cartReducer = (state, action) => {
     };
   }
 
+  if (action.type === "CLEAR") {
+    return defaultCartState;
+  }
   return defaultCartState;
 };
 
@@ -92,11 +92,16 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: "REMOVE_CART_ITEM", id: id });
   };
 
+  const clearCartHandler = () => {
+    dispatchCartAction({ type: "CLEAR" });
+  };
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemHandler,
+    clearCart: clearCartHandler,
   };
   return (
     <CartContext.Provider value={cartContext}>
