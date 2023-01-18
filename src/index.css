@@ -54,3 +54,24 @@ body {
   background-color: teal;
   color: white;
 }
+
+.PageError {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  height: 120px;
+  font-family: 'Kanit', sans-serif;
+  margin: auto;
+  background: linear-gradient(130deg, #ff674f, #e9160b);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+  font-size: 33px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
