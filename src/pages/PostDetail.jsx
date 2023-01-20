@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 import BlogPost from "../components/BlogPost";
+import NewsletterSignup from "../components/NewsletterSignup";
 import { getPost } from "../util/api";
 
 function PostDetailPage() {
@@ -37,6 +38,7 @@ function PostDetailPage() {
       {!error && post &&  */}
 
       <BlogPost title={postData.title} text={postData.body} />
+      <NewsletterSignup />
     </>
   );
 }
