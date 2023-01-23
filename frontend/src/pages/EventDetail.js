@@ -21,7 +21,7 @@ const EventDetail = () => {
       </Suspense>
       <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
         <Await resolve={events}>
-          {(loadedEvents) => <EventsList event={loadedEvents} />}
+          {(loadedEvents) => <EventsList events={loadedEvents} />}
         </Await>
       </Suspense>
     </>
