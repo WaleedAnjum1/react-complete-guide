@@ -76,12 +76,13 @@ const Comments = () => {
 
   return (
     <section className={classes.comments}>
-      <h2>User Comments</h2>
       {!isAddingComment && (
         <button className="btn" onClick={startAddCommentHandler}>
           Add a Comment
         </button>
       )}
+      <h2>Comments</h2>
+      <hr className={classes.hr} />
       {isAddingComment && (
         <NewCommentForm
           quoteId={quoteId}

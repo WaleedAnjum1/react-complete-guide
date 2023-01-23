@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.hr {
+  border-bottom: 2px solid teal;
+}
+
 .comments > button {
   font-size: 1.25rem;
 }
