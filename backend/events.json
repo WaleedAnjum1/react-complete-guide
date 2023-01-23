@@ -1,6 +1,27 @@
 {
   "events": [
     {
+      "title": "Community event",
+      "image": "https://images.squarespace-cdn.com/content/v1/5b33e7389772ae094e7fed7d/1628863547885-RFFHQZ6II7ONLDMEF07E/harry-grout-4bzC0Bi12vY-unsplash.jpg",
+      "date": "2023-01-26",
+      "description": "community event description",
+      "id": "11869813-cf4a-418c-8979-a103cea57468"
+    },
+    {
+      "title": "A new event",
+      "image": "https://bookitnow.pk/uploads/d13902749957ed20cdd70c2f265822a0.jpg",
+      "date": "2023-01-24",
+      "description": "new event description",
+      "id": "5ee608bb-851d-4ceb-a891-51b3630ddbd4"
+    },
+    {
+      "title": "Chinese New Year",
+      "image": "https://phantom-marca.unidadeditorial.es/47edf0c794cfcc7ff48eb23c9bbdd382/resize/1320/f/jpg/assets/multimedia/imagenes/2021/12/25/16404638548692.jpg",
+      "date": "2023-01-30",
+      "description": "Chinese New Year Celebration which is a must visit upcoming event of the year.",
+      "id": "384f3142-fee1-4c09-b796-003378302643"
+    },
+    {
       "id": "e1",
       "title": "A dummy event",
       "date": "2023-02-22",
