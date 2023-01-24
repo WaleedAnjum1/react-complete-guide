@@ -3,6 +3,7 @@ import classes from "./AuthForm.module.css";
 
 import useInput from "../../hooks/use-input";
 import AuthContext from "../../store/auth-context";
+import { useHistory } from "react-router-dom";
 
 const isPassword = (value) =>
   /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i.test(value);
@@ -34,6 +35,7 @@ const AuthForm = () => {
     formIsValid = true;
   }
 
+  const history = useHistory();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
@@ -94,6 +96,7 @@ const AuthForm = () => {
       })
       .then((data) => {
         authCtx.login(data.idToken);
+        history.replace("/");
         resetMailInput();
         resetPasswordInput();
       })
