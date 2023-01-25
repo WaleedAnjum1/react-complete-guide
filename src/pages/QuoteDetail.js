@@ -6,11 +6,6 @@ import LoadingSpinner from "../components/UI/LoadingSpinner";
 import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
 
-const DUMMY_QUOTES = [
-  { id: "q1", author: "Max", text: "A simple static quote here" },
-  { id: "q2", author: "Sam", text: "Another static quote here" },
-];
-
 const QuoteDetail = () => {
   const match = useRouteMatch();
   const params = useParams();
